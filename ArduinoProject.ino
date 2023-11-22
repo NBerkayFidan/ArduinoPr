@@ -37,7 +37,7 @@ void setup() {
   lcd.begin();
   lcd.backlight();
   lcd.setCursor(0, 0);
-  lcd.print("Fid<a>n Software");
+  lcd.print("Welkom");
   delay(3000);
   lcd.clear();
 }
@@ -79,12 +79,12 @@ String wachtwoordwzg() {
 void controleer(String cntrl) {
   if (girilen_sifre == sifre) {
     lcd.setCursor(0, 1);
+    lcd.print("Correct Password");
     digitalWrite(2, HIGH);
     digitalWrite(3, LOW);
     digitalWrite(1,HIGH);
-    delay(3000);
+    delay(1000);
     digitalWrite(1,LOW);
-    lcd.print("Correct Password");
     ds = true;
     motor.write(180);
     delay(1000);
